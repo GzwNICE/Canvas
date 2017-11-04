@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1.添加画布 -->
+    <canvas></canvas>
+    <script>
+        // 2.获取纸（获取canvas元素）
+        var canvas = document.querySelector('canvas');
+        canvas.width = 600;
+        canvas.height = 400;
+        canvas.style.border = '1px solid #000';
+        // 3.准备画笔（canvas上下文）
+        var context = canvas.getContext('2d');
+        // 4.确定画笔的开始点
+        context.moveTo(10, 10);
+        // 5.确定画笔的第一个结束点
+        context.lineTo(110, 10);
+        // 6.确定画笔的第二个结束点
+        context.lineTo(110, 110);
+        // 7.确定画笔的第三个结束点
+        context.lineTo(10, 110);
+        // 8.确定画笔的第四个结束点
+        context.lineTo(10, 10);
+        // 9.把确定好的点用画笔连接起来
+        context.stroke();
+    </script>
+</body>
+
+</html>

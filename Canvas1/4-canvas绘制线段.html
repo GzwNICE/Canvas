@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas绘制线段--直线</title>
+</head>
+
+<body>
+    <!-- 
+    canvas绘制图形的基本步骤大概有:
+      1.在html中添加画布元素
+      2.通过js获取画布元素
+      3.获得画笔(上下文)
+   -->
+
+    <!-- 1.在html中添加画布元素 -->
+    <canvas></canvas>
+
+    <script>
+        //   2.通过js获取画布元素
+        var canvas = document.querySelector('canvas');
+        // 2.1 设置画布的大小及边框
+        canvas.width = 600;
+        canvas.height = 300;
+        canvas.style.border = '1px solid #ff0000';
+        //   3.获取画笔(上下文)
+        var context = canvas.getContext('2d'); // 这是画二维图形的画笔
+        // 4.计划直线的起点
+        context.moveTo(10,10);
+        // 5.计划直线的终点
+        context.lineTo(110,110);
+        // 6.开始上画笔
+        context.stroke();
+
+
+        // 设置线的拐点样式
+
+        // // 写第1条线
+        // context.moveTo(100, 100);
+        // context.lineTo(150, 150);
+        // context.lineTo(200, 100);
+        // // 写第2条线
+        // context.moveTo(200, 100);
+        // context.lineTo(250, 150);
+        // context.lineTo(300, 100);
+        // // 写第3条线
+        // context.moveTo(300, 100);
+        // context.lineTo(350, 150);
+        // context.lineTo(400, 100);
+
+        // // 设置线宽
+        // context.lineWidth = 10;
+        // // 设置线的颜色
+        // context.strokeStyle = '#ff0000';
+        // // 设置线末端类型
+        // // context.lineCap = 'butt';  //默认
+        // context.lineCap = 'round'; //圆角
+        // // context.lineCap = 'square'; // 方角
+
+        // // 设置线的拐点样式
+        // // context.lineJoin='miter';  //默认
+        // context.lineJoin = 'round'; //圆角
+        // // context.lineJoin='bevel'; //平角
+        // context.stroke();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘制镂空正方形</title>
+</head>
+
+<body>
+    <img src="./image/feilinghuanraoyuanze.png" alt="">
+    <canvas>
+        您的浏览器版本不支持canvas,请升级!!
+    </canvas>
+    <script>
+        // 2.获取纸（获取canvas元素）
+        var canvas = document.querySelector('canvas');
+        canvas.width = 600;
+        canvas.height = 300;
+        canvas.style.border = '1px solid #000';
+        // 3.准备画笔（canvas上下文）
+        var context = canvas.getContext('2d');
+        // 4.绘制正方形
+        context.moveTo(100, 50);
+        context.lineTo(500, 50);
+        context.lineTo(500, 250);
+        context.lineTo(100, 250);
+        context.lineTo(100, 50);
+        context.fillStyle = 'red';
+        context.fill();
+
+        // 绘制小矩形
+        context.beginPath();
+        context.moveTo(200, 100);
+        context.lineTo(200, 200);
+        context.lineTo(400, 200);
+        context.lineTo(400, 100);
+        context.lineTo(200, 100);
+        context.fillStyle = 'blue';
+        context.fill();
+        
+        // 问题：通过fill 来获取镂空的长方形框 ，通过代码可知，所有的线条都是顺时针连接的 ，所以没有得到镂空的图形
+        // 原因: 因为非零环绕原则
+        // 注意事项: 非零环绕原则只适用于一笔画成的图形
+    </script>
+</body>
+
+</html>

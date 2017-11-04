@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas ></canvas>
+    <script>
+         // 2.获取纸（获取canvas元素）
+         var canvas = document.querySelector('canvas');
+        canvas.width = 500;
+        canvas.height = 300;
+        canvas.style.border = '1px solid #000';
+        // 3.准备画笔（canvas上下文）
+        var context = canvas.getContext('2d');
+        
+        context.lineWidth = 10;
+        for(var i=0;i<256;i++ ){
+            context.beginPath();
+            context.moveTo(10+i,100);
+            context.lineTo(100+i,100);
+            context.strokeStyle = 'rgb(255,'+i+','+i+')';
+            context.stroke();
+        }
+    </script>
+</body>
+</html>
