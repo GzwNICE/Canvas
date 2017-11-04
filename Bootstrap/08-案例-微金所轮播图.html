@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="./lib/css/bootstrap.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      a {
+        display: block;
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 这里写代码 -->
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        </ol>
+      
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <!-- 这个2000宽度的轮播图在超小屏幕中是隐藏的 对吗
+                 这个640宽都的轮播图在 超小屏幕是显示的对吗
+                 
+            -->
+            <a href="#" class="hidden-xs"><img src="./images/slide_01_2000x410.jpg" alt="..."></a>
+
+            <a href="#" class="hidden-lg hidden-md hidden-sm"><img src="./images/slide_01_640x340.jpg" alt="..."></a>
+            
+          </div>
+          <div class="item">
+              <a href="#" class="hidden-xs"><img src="./images/slide_02_2000x410.jpg" alt="..."></a>
+              <a href="#" class="hidden-lg hidden-md hidden-sm"><img src="./images/slide_02_640x340.jpg" alt="..."></a>
+          </div>
+          <div class="item">
+              <a href="#" class="hidden-xs"><img src="./images/slide_03_2000x410.jpg" alt="..."></a>
+              <a href="#" class="hidden-lg hidden-md hidden-sm"><img src="./images/slide_03_640x340.jpg" alt="..."></a>
+            </div>
+            <div class="item">
+                <a href="#" class="hidden-xs"><img src="./images/slide_04_2000x410.jpg" alt="..."></a>
+                <a href="#" class="hidden-lg hidden-md hidden-sm"><img src="./images/slide_04_640x340.jpg" alt="..."></a>
+              </div>
+        </div>
+      
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    <script src="./js/jQuery.min.js"></script>
+    <script src="./lib/js/bootstrap.min.js"></script>
+  </body>
+</html>

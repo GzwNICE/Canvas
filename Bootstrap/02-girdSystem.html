@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Bootstrap中的布局容器</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./lib/css/bootstrap.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        div[class^='col'] {
+            background-color: #ccc;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            box-shadow: 0 0 1px  #333;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 栅格系统把各种各样的屏幕分成了四类
+    1. 手机   col-xs-*  * 代表几列 *最大是12
+    2. 平板   col-sm-* 
+    3.  普通屏幕 col-md-*
+    4.  超大屏幕  col-lg-* -->
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+            <div class="col-xs-1 col-md-1">1</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-md-2">2</div>
+            <div class="col-xs-4 col-md-2">2</div>
+            <div class="col-xs-4 col-md-2">2</div>
+            <div class="col-xs-4 col-md-2">2</div>
+            <div class="col-xs-4 col-md-2">2</div>
+            <div class="col-xs-4 col-md-2">2</div>
+        </div>
+        <div class="row">
+            <div class="col-xs-4 col-md-3">3</div>
+            <div class="col-xs-4 col-md-3">3</div>
+            <div class="col-xs-4 col-md-3">3</div>
+            <div class="col-xs-12 col-md-3">3</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">4</div>
+            <div class="col-md-4">4</div>
+            <div class="col-md-4">4</div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">6</div>
+            <div class="col-md-6">6</div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">12</div>
+        </div>
+        <div class="row">
+            <div class="col-md-7">7</div>
+            <div class="col-md-6">6</div>
+        </div>
+
+        <!-- 列偏移 .col-*(xs,sm,md.lg)-offset-*  向右偏移-->
+        <div class="row">
+            <div class="col-md-4">4</div>
+            <div class="col-md-4 col-md-offset-4">4</div>
+        </div>
+
+        <!-- 列嵌套 -->
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="col-md-6">6</div>
+                <div class="col-md-6">6</div>
+            </div>
+        </div>
+
+        <!-- 列顺序 push推 pull拉 -->
+        <div class="row">
+            <div class="col-md-9 col-md-push-3">.col-md-9 .col-md-push-3</div>
+            <div class="col-md-3 col-md-pull-9">.col-md-3 .col-md-push-9</div>
+        </div>
+    </div>
+
+    <script src="./js/jQuery.min.js"></script>
+    <script src="./lib/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 基本模板</title>
+
+    <!-- Bootstrap -->
+    <link href="./lib/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+          <![endif]-->
+    <style>
+        .item {
+            position: relative;
+            width: 100%;
+            height: 190px;
+            padding-right: 80px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            background-color: #f8f8f8;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+        .item.two{
+            background-color: red;
+            color: #fff;
+        }
+        .item.two img{
+            position: absolute;
+            top: 0;
+            left:0;
+        }
+        .item.two #teot {
+            color: #fff;
+        }
+        .item .item-left {
+            width: 100%;
+            height: 100%;
+            padding: 15px;
+        }
+        .item .item-left h2 {
+            font-size: 20px;
+            text-align: center;    
+        }
+        .item .item-left h2 a {
+            color: #000;
+        }
+        .item .item-left ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+        .item .item-left li:nth-child(1) {
+            float: left;
+        }
+        .item .item-left li:nth-child(2) {
+            float: right;
+        }
+        .item .item-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 100%;
+            border-left: 1px dashed #333;
+            text-align: center;
+            padding-top: 70px;
+        }
+        .item .item-right:before{
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 2px 1px 0px #fff;
+        }
+        .item .item-right:after{
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: -8px;
+            width: 16px;
+            height: 16px;
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 -2px 1px 0px #ccc;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="wjs-tab">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="active">
+                        <a href="#home" data-toggle="tab">特别推荐</a>
+                    </li>
+                    <li>
+                        <a href="#profile" data-toggle="tab">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#messages" data-toggle="tab">Messages</a>
+                    </li>
+                    <li>
+                        <a href="#settings" data-toggle="tab">Settings</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="home">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                    <div class="item">
+                                        <div class="item-left">
+                                            <h2>
+                                                <a href="havascript:;">新手体验</a>
+                                            </h2>
+                                            <ul>
+                                                <li>起投金额</li>
+                                                <li>起投金额</li>
+                                            </ul>
+                                            <ul>
+                                                <li>0.01万</li>
+                                                <li>0.01万</li>
+                                            </ul>
+                                            <ul>
+                                                <li>借款期限</li>
+                                                <li>借款期限</li>
+                                            </ul>
+                                            <ul>
+                                                <li>10天</li>
+                                                <li>10天</li>
+                                            </ul>
+                                        </div>
+                                        <div class="item-right">
+                                            <p>8</p>
+                                            <p>年利率</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="item two">
+                                                <div class="item-left">
+                                                    <img src="./images/tiyan.png" alt="">
+                                                    <h2>
+                                                        <a href="havascript:;" id='teot'>新手体验</a>
+                                                    </h2>
+                                                    <ul>
+                                                        <li>起投金额</li>
+                                                        <li>起投金额</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>0.01万</li>
+                                                        <li>0.01万</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>借款期限</li>
+                                                        <li>借款期限</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>10天</li>
+                                                        <li>10天</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="item-right">
+                                                    <p>8</p>
+                                                    <p>年利率</p>
+                                                </div>
+                                            </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="item">
+                                                <div class="item-left">
+                                                    <h2>
+                                                        <a href="havascript:;">新手体验</a>
+                                                    </h2>
+                                                    <ul>
+                                                        <li>起投金额</li>
+                                                        <li>起投金额</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>0.01万</li>
+                                                        <li>0.01万</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>借款期限</li>
+                                                        <li>借款期限</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>10天</li>
+                                                        <li>10天</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="item-right">
+                                                    <p>8</p>
+                                                    <p>年利率</p>
+                                                </div>
+                                            </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4">
+                                        <div class="item">
+                                                <div class="item-left">
+                                                    <h2>
+                                                        <a href="havascript:;">新手体验</a>
+                                                    </h2>
+                                                    <ul>
+                                                        <li>起投金额</li>
+                                                        <li>起投金额</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>0.01万</li>
+                                                        <li>0.01万</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>借款期限</li>
+                                                        <li>借款期限</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li>10天</li>
+                                                        <li>10天</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="item-right">
+                                                    <p>8</p>
+                                                    <p>年利率</p>
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="profile">2</div>
+                    <div class="tab-pane" id="messages">3</div>
+                    <div class="tab-pane" id="settings">4</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/jQuery.min.js"></script>
+    <script src="./lib/js/bootstrap.js"></script>
+</body>
+
+</html>

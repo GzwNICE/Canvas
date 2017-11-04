@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Bootstrap中的布局容器</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./lib/css/bootstrap.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        div[class^='container'] {
+            height: 50px;
+            background-color:  hotpink;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 代码写在这里 学习bootstrap其实学习的很多很多很多的class的名字 -->
+
+    <!-- bootstrap中的布局容器 -->
+
+    <!-- .container 用于固定宽度布局 -->
+    <div class="container">固定宽度布局容器</div>
+
+    <!-- .container-fluid 用于百分比布局  宽度是100% -->
+    <div class="container-fluid">占满全屏的布局容器</div>
+
+    <!-- 引入jquery库 -->
+    <script src="./js/jQuery.min.js"></script>
+    <!-- 引入bootstrap.js 各个插件库 -->
+    <script src="./lib/js/bootstrap.js"></script>
+</body>
+</html>

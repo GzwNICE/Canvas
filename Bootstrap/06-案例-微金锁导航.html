@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>微金所导航</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        .wjs-nav.navbar-default .navbar-nav>li>a{
+                padding: 0  15px;
+                line-height: 80px;
+            }
+        .wjs-nav.navbar-default .navbar-nav>li>b {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: red;
+            opacity: 0;
+        }
+        .wjs-nav.navbar-default .navbar-nav>li:hover>b {
+            opacity: 1;
+        }
+        .navbar-header {
+            height: 80px;
+        }
+        ul.navbar-nav {
+            margin: 0 -15px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="wjs-nav navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle bread-btn collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                <!-- 网站logo -->
+                <a class="navbar-brand" href="#">
+                        <img src="./images/logo.png" alt="">
+                    </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">我要投资</a>
+                        <b></b>
+                    </li>
+                    <li>
+                        <a href="#">我要借贷</a>
+                        <b></b>
+                    </li>
+                    <li>
+                        <a href="#">平台介绍</a>
+                        <b></b>
+                    </li>
+                    <li>
+                        <a href="#">新手专区</a>
+                        <b></b>
+                    </li>
+                    <li>
+                        <a href="#">最新动态</a>
+                        <b></b>
+                    </li>
+                    <li>
+                        <a href="#">微平台</a>
+                        <b></b>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">个人中心</a>
+                        <b></b>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
