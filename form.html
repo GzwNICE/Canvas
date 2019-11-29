@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form and Canvas</title>
+  <style>
+    #my_canvas,
+    #logo {
+      display: block;
+      margin: 20px 10px;
+      border: 1px solid #000000;
+    }
+
+    form {
+      width: 500px;
+      margin: 20px 7px;
+    }
+
+    li {
+      display: flex;
+      margin: 10px 0;
+    }
+
+    label {
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/projects/l" method="POST">
+    <fieldset id="personal_information">
+      <legend>Project Infomation</legend>
+      <ol>
+        <li>
+          <label for="name">name</label>
+          <input type="text" name="name" autofocus id="name">
+        </li>
+        <li>
+          <label for="priority">Priority</label>
+          <input type="range" min="0" max="10" name="priority" value="0" id="priority">
+        </li>
+        <li>
+          <label for="estimated_hours">Estimated Hours</label>
+          <input type="number" name="estimated_hours" min="0" max="1000" id="estimated_hours">
+        </li>
+        <li>
+          <label for="start_date">Start Date</label>
+          <input type="date" name="start_date" id="start_date" value="2019-11-29">
+        </li>
+        <li>
+          <label for="email">Email contact</label>
+          <input type="email" name="email" id="email">
+        </li>
+        <li>
+          <label for="url">Staging URL</label>
+          <input type="url" name="url" id="url">
+        </li>
+        <li>
+          <label for="project_color">Project Color</label>
+          <input type="color" name="project_color" id="project_color">
+        </li>
+        <li>
+          <input type="submit" value="Submit">
+        </li>
+      </ol>
+    </fieldset>
+  </form>
+  <div>
+    <canvas id="logo" width="400" height="200">
+      <h1>Logo</h1>
+    </canvas>
+    <canvas id="my_canvas" width="200" height="200">
+      Fallback content here
+    </canvas>
+  </div>
+</body>
+<script>
+  // 第一个canvas
+  window.onload = function () {
+    var canvas = document.getElementById("my_canvas")
+    if (canvas.getContext) {
+      var context = canvas.getContext('2d')
+      context.fillStyle = 'rgb(200,0,0)'
+      context.fillRect(30, 30, 100, 100)
+      context.fillStyle = 'rgb(0,200,0)'
+      context.fillRect(40, 40, 100, 100)
+      context.fillStyle = 'rgb(0,0,200)'
+      context.fillRect(50, 50, 100, 100)
+    } else {
+      alert('当前版本不支持canvas哦！')
+    }
+
+
+    // 第二个canvas
+    var canvas = document.getElementById("logo")
+    if (canvas.getContext) {
+      var context = canvas.getContext('2d')
+      context.font = 'italic 40px sans-serif'  //设置字体
+      context.textBaseLine = 'top' //设置文字对其方式
+      context.fillText('AwesomeCo', 60, 40) //绘制文字 位置为（x，y）（60，40）
+      // 开始绘制线条 
+
+      context.lineWidth = 2  //设置线条宽度
+      context.beginPath()  //开始绘制
+      context.moveTo(0, 40) //移动到（0，40）
+      context.lineTo(30, 0)  //绘制从（0，40）- (30,0)的线条
+      context.lineTo(60, 40) //绘制从（0，40）- (60,40)的线条
+      context.lineTo(285, 40) //绘制从（60,40）- (285,40)的线条
+      context.stroke() //绘制路径
+      context.closePath() //闭合绘制
+      // 开始绘制正方形
+      context.save()  //保存当前绘制内容
+      context.translate(20, 20) //原点移动到（20，20）
+      context.fillRect(0, 0, 20, 20) //绘制一个宽高为20的矩形，起点在（20，20）
+      // 改变颜色
+      context.fillStyle = '#fff'   //改变填充色
+      context.strokeStyle = '#fff'  //改变笔触颜色 也就是线条或边框颜色
+      // 绘制三角形，位于正方形内
+      context.lineWidth = 2  // ...
+      context.beginPath()
+      context.moveTo(0, 20)
+      context.lineTo(10, 0)
+      context.lineTo(20, 20)
+      context.lineTo(0, 20)
+      context.fill()  //填充矩形颜色
+      context.closePath()
+      // 划重点 
+      // save：用来保存Canvas的状态。save之后，可以调用Canvas的平移、放缩、旋转、错切、裁剪等操作。 
+      // restore：用来恢复Canvas之前保存的状态。防止save后对Canvas执行的操作对后续的绘制有影响。
+      context.restore()
+      //创建线性渐变对象 渐变可用于填充矩形、圆形、线条、文本等等 
+      // context.createLinearGradient(x0,y0,x1,y1);
+      // x0: 渐变开始点的 x 坐标
+      // y0: 渐变开始点的 y 坐标
+      // x1: 渐变结束点的 x 坐标
+      // y1: 渐变结束点的 y 坐标
+      var grd = context.createLinearGradient(0, 0, 170, 0);
+      // addColorStop() 方法规定 gradient 对象中的颜色和位置。
+      // gradient.addColorStop(stop,color)
+      // stop: 介于 0.0 与 1.0 之间的值，表示渐变中开始与结束之间的位置。
+      // color: 在结束位置显示的 CSS 颜色值
+      grd.addColorStop(0, "#000");
+      grd.addColorStop(0.5, "#f00");
+      grd.addColorStop(1, "white");
+      context.fillStyle = grd;
+      context.fillRect(20, 60, 150, 100);
+    } else {
+      alert('当前版本不支持canvas哦！')
+    }
+  }
+</script>
+
+</html>
