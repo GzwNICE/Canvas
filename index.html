@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>图片压缩实例</title>
+  <link rel="stylesheet" href="https://print.in66.com/project/activity/css/base.css">
+  <style>
+    body,
+    html {
+      overflow: hidden;
+    }
+
+    .box {
+      width: 5.333333rem;
+      height: 7rem;
+      max-height: 10rem;
+      border: 1px solid #000;
+      margin: 3rem auto 0;
+      position: relative;
+      border-radius: .106667rem;
+    }
+
+    .inputfile {
+      display: none;
+    }
+
+    .btn-success {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      padding-top: 5.6rem;
+      background: url(./applyImg.png) no-repeat;
+      background-size: contain;
+      box-sizing: border-box;
+    }
+
+    .imgpre {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      display: none;
+      margin: 0 auto;
+      border: 1px solid #f3f3f3;
+    }
+
+    .btn {
+      display: block;
+      width: 2.333333rem;
+      height: .8rem;
+      background: none;
+      margin: .8rem auto 0;
+      color: #fff;
+      border: none;
+      border-radius: .106667rem;
+      background-image: linear-gradient(#6c6d6d, #060203);
+      box-shadow: 0 0.133333rem 0.133333rem rgba(22,22,22,0.23);
+    }
+
+    .result {
+      width: 100%;
+      padding: .533333rem 0.8rem;
+      box-sizing: border-box;
+      margin: .4rem auto 0;
+    }
+    .banner {
+      width: 100%;
+      height: 3.32rem;
+      position: relative;
+      top: -0.133333rem;
+      left: 0;
+    }
+
+    .loading {
+      display: block;
+      width: 100%;
+      font-size: .38rem;
+      text-align: center;
+    }
+
+    .analyze,
+    .errbox {
+      width: 100%;
+      font-size: .433333rem;
+      text-align: center;
+      /* display: none; */
+    }
+
+    .analyze span {
+      margin: 0 .133333rem;
+      color: red;
+      font-size: .633333rem;
+    }
+    .tips {
+      text-align: center;
+      font-size: .433333rem;
+      margin-top: .266667rem;
+    }
+ 
+    .verify {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      z-index: 10;
+      /* display: none; */
+    }
+    .verify ul {
+      width: 7.333333rem;
+      padding: 1rem 0;
+      box-sizing: border-box;
+      border-radius: .133333rem;
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%,-50%);
+      border: .013333rem solid rgba(208,208,208,0.2);
+      box-shadow: .013333rem .266667rem .266667rem 0px rgba(208,208,208,0.2);
+    }
+    .verifyli {
+      line-height: 1.333333rem;
+    }
+    .authCode {
+      width: 4rem;
+      height: 0.8rem;
+      border: .013333rem solid #cccccc;
+      padding: 0.15rem;
+      border-radius: .08rem;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .verifyBt {
+      margin-top: .8rem;
+      width: 2rem;
+      height: 0.8rem;
+      border: .013333rem solid #cccccc;
+      background: none;
+      padding: .1rem;
+      border-radius: .08rem;
+    }
+    .versions {
+      color: #cccccc;
+      text-align: center;
+      position: absolute;
+      bottom: .266667rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .compare {
+      position: absolute;
+      bottom: -2.666667rem;
+      width: 5.333333rem;
+      left: 10%;
+      display: none;
+    }
+    .compare {
+      margin-top: 1.333333rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="verify" 　id="verify">
+    <ul>
+        <li class="verifyli">
+            内测码：<input type="text" class="authCode" id="authCode" placeholder="请输入内测码" maxlength="6">
+          </li>
+          <li class="verifyli">
+            <button class="verifyBt" id="verifyBt">确定</button>
+          </li>
+    </ul>
+  </div>
+  <div id="spread">
+    <div class="box">
+      <input type="file" accept="image/*" name="file" id="file" class="inputfile" />
+      <label for="file" class="btn-success">请选择一张照片</label>
+      <img src="" alt="" class="imgpre">
+      <div class="compare">
+        <li>
+          <label for="artwork">原大小：</label><input type="text" id="artwork">
+        </li>
+        <li>
+          <label for="artwork-after">压缩后：</label><input type="text" id="artwork-after">
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+  <script src="./flexible.js"></script>
+  <script src="./exif.js"></script>
+  <script src="./lrz.js"></script>
+  <script src="./mirror.js"></script>
+</body>
+
+</html>
